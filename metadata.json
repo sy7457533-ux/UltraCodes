@@ -1,0 +1,6 @@
+{
+  "name": "ProfileNest Browser",
+  "description": "Privacy-focused multi-profile Chromium browser desktop application for Windows with isolated sessions, SQLite metadata, and tab management.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

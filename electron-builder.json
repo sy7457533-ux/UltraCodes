@@ -1,0 +1,46 @@
+{
+  "appId": "com.profilenest.browser",
+  "productName": "ProfileNest Browser",
+  "copyright": "Copyright © 2026 ProfileNest Project",
+  "directories": {
+    "output": "release",
+    "buildResources": "build"
+  },
+  "files": [
+    "dist/**/*",
+    "electron/**/*",
+    "src/main/**/*",
+    "src/preload/**/*",
+    "src/shared/**/*",
+    "package.json"
+  ],
+  "extraMetadata": {
+    "main": "electron/main.cjs"
+  },
+  "win": {
+    "target": [
+      {
+        "target": "nsis",
+        "arch": ["x64"]
+      },
+      {
+        "target": "portable",
+        "arch": ["x64"]
+      }
+    ],
+    "icon": "build/icon.ico",
+    "artifactName": "ProfileNest-Browser-${version}-${arch}.${ext}",
+    "requestedExecutionLevel": "asInvoker"
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true,
+    "createDesktopShortcut": "always",
+    "createStartMenuShortcut": true,
+    "shortcutName": "ProfileNest Browser",
+    "runAfterFinish": true
+  },
+  "portable": {
+    "artifactName": "ProfileNest-Browser-${version}-Portable.${ext}"
+  }
+}
